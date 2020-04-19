@@ -1,0 +1,45 @@
+<h2>Personal Loan {{appname}} Details!</h2>
+
+<form>
+
+  <div class="form-group">
+    <label for="bloanfn">First Name</label>
+    <input type="text" class="form-control" id="bloanfn" aria-describedby="emailHelp" placeholder="First Name" [(ngModel)]="loanData.firstname">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloansn">Second Name</label>
+    <input type="text" class="form-control" id="bloansn" aria-describedby="emailHelp" placeholder="Second Name" [(ngModel)]="loanData.secondname">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloanaccounno">Bank Account No  </label>
+    <input type="text" class="form-control" id="bloanaccounno" aria-describedby="emailHelp" placeholder="Bank Account No " [(ngModel)]="loanData.bankaccount">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloanssn">Social Security number (SSN) </label>
+    <input type="text" class="form-control" id="bloanssn" aria-describedby="emailHelp" placeholder="Social Security number (SSN)" pattern='[0-9]*'>
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloandate">Date Of birth</label>
+    <input type="date" class="form-control" id="bloandate" aria-describedby="emailHelp" placeholder="Date Of birth">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloanphoneno">Phone No</label>
+    <input type="number" class="form-control" id="bloanphoneno" aria-describedby="emailHelp" placeholder="Phone No">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <div class="form-group">
+    <label for="bloanemail">Email address</label>
+    <input type="email" class="form-control" id="bloanemail" aria-describedby="emailHelp" placeholder="Enter email">
+    <!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  </div>
+  <!--<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>-->
+  <button type="submit" class="btn btn-primary" (click)="SubmitData()">Submit</button>
+</form>

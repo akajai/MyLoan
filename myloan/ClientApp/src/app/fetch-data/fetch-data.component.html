@@ -1,0 +1,28 @@
+<h1 id="tableLabel">Loan History</h1>
+
+
+
+<p *ngIf="!forecasts"><em>Loading...</em></p>
+
+<div class="container">
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts">
+    <thead>
+      <tr>
+
+        <th>Date</th>
+
+        <th>Min Amound</th>
+        <th>Max Amound</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let forecast of forecasts">
+        <td>{{ forecast.date }}</td>
+        <td>{{ forecast.temperatureC }}</td>
+        <td>{{ forecast.temperatureF }}</td>
+        <td>{{ forecast.summary }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
