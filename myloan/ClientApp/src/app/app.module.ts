@@ -15,6 +15,7 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { PloanComponent } from './ploan/ploan.component';
 import { BloanComponent } from './bloan/bloan.component';
 import { HowitworksComponent } from './howitworks/howitworks.component';
+import { LaonService } from './laon.service';
 
 
 
@@ -41,11 +42,12 @@ import { HowitworksComponent } from './howitworks/howitworks.component';
       { path: 'ploan', component: PloanComponent },
       { path: 'bloan', component: BloanComponent },
       { path: 'itworks', component: HowitworksComponent },
-      { path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
+            { path: 'fetch-data', component: FetchDataComponent },
+      //{ path: 'fetch-data', component: FetchDataComponent, canActivate: [AuthorizeGuard] },
       { path: '**', redirectTo:'' },
     ])
   ],
-  providers: [
+  providers: [LaonService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
